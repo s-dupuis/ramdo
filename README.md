@@ -1,4 +1,4 @@
-# ramdo
+# @sebdup/ramdo
 
 Ramda extension
 
@@ -11,15 +11,15 @@ Ramda extension
 You don't need to install Ramda, every native function can be imported directly.
 
 ```bash
-$ npm install ramdo
+$ npm install @sebdup/ramdo
 ```
 
 ```js
-import * as R from 'ramdo';
+import * as R from '@sebdup/ramdo';
 ```
 
 ```js
-import { isNil, isNilOrEmpty } from 'ramdo';
+import { isNil, isNilOrEmpty } from '@sebdup/ramdo';
 ```
 
 ## II. Concept
@@ -49,7 +49,7 @@ Returns the first element of the list which matches the predicate, or defaultVal
 
 `(Function, any, any[]) => any`
 ```js
-import { findOr, propEq } from 'ramdo';
+import { findOr, propEq } from '@sebdup/ramdo';
 
 const items = [{ name: 'John' }];
 
@@ -65,7 +65,7 @@ Checks if the input value is null, undefined or empty.
 
 `any => Boolean`
 ```js
-import { isNilOrEmpty } from 'ramdo';
+import { isNilOrEmpty } from '@sebdup/ramdo';
 
 isNilOrEmpty(undefined); // true
 isNilOrEmpty(null); // true
@@ -83,7 +83,7 @@ It can be used to log a value at a step of a composition function. It does not a
 
 `any => any`
 ```js
-import { log, compose, append } from 'ramdo';
+import { log, compose, append } from '@sebdup/ramdo';
 
 compose(
    append('Text 2'),
@@ -103,7 +103,7 @@ Otherwise, the source object is returned.
 
 `(String|String[], any, object) => object`
 ```js
-import { pathDefaultTo } from 'ramdo';
+import { pathDefaultTo } from '@sebdup/ramdo';
 
 const obj = {
     user: {
@@ -124,7 +124,7 @@ If val was created using Object.create, R.pathIs(path, Object, val) === true.
 
 `(String|String[], Type, object) => Boolean`
 ```js
-import { pathDefaultTo } from 'ramdo';
+import { pathDefaultTo } from '@sebdup/ramdo';
 
 const obj = {
     subObj1: {
@@ -148,7 +148,7 @@ Otherwise, the source object is returned.
 
 `(String, any, object) => object`
 ```js
-import { propDefaultTo } from 'ramdo';
+import { propDefaultTo } from '@sebdup/ramdo';
 
 const obj = {
     firstName: 'John'

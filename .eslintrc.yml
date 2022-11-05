@@ -6,6 +6,7 @@ extends:
 parserOptions:
   ecmaVersion: 2018
   sourceType: module
+ignorePatterns: ["dist/**/*"]
 rules:
   indent: ["error", 2]
   object-curly-spacing: [ "error", "always"]
