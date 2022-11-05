@@ -1,0 +1,52 @@
+{
+  "name": "ramdo",
+  "version": "0.0.0",
+  "description": "Extended Ramda",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./lib/esm/types/index.d.ts",
+        "default": "./lib/esm/index.mjs"
+      },
+      "require": {
+        "types": "./lib/cjs/types/index.d.ts",
+        "default": "./lib/cjs/index.js"
+      }
+    }
+  },
+  "files": [
+    "src/**/*"
+  ],
+  "scripts": {
+    "clean": "rm -rf ./lib",
+    "build": "npm run clean && npm run build:esm && npm run build:cjs",
+    "test": "mocha \"./tests/*.spec.js\" -S --exit",
+    "semantic-release": "semantic-release",
+    "prepack": "npm run build",
+    "lint": "eslint ."
+  },
+  "release": {
+    "branches": [
+      "master"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "ramda"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "ramda": "^0.28.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.9",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/register": "^7.18.9",
+    "eslint": "^6.8.0",
+    "mocha": "10.1.0",
+    "chai": "^4.3.6"
+  }
+}
