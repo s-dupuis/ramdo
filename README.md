@@ -36,12 +36,12 @@ pathEq('prop1.prop2.prop3', 'value', {})
 ```
 
 ## III. New functions
-* [findOr]()
-* [isNilOrEmpty]()
-* [log]()
-* [pathDefaultTo]()
-* [pathIs]()
-* [propDefaultTo]()
+* [findOr](https://github.com/s-dupuis/ramdo#findor)
+* [isNilOrEmpty](https://github.com/s-dupuis/ramdo#isnilorempty)
+* [log](https://github.com/s-dupuis/ramdo#log)
+* [pathDefaultTo](https://github.com/s-dupuis/ramdo#pathdefaultto)
+* [pathIs](https://github.com/s-dupuis/ramdo#pathis)
+* [propDefaultTo](https://github.com/s-dupuis/ramdo#propdefaultto)
 
 ### findOr
 
