@@ -134,7 +134,7 @@ const obj = {
     }
 };
 pathIs(['subObj1', 'subObj2', 'name'], String, obj); // true
-pathIs(['subObj1.subObj2.name'], Number, obj); // false
+pathIs('subObj1.subObj2.name', Number, obj); // false
 ```
 
 ### propDefaultTo
