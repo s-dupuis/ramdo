@@ -1,10 +1,7 @@
-import { isNilOrEmpty } from './functions/isNilOrEmpty';
-import { pathIs } from './functions/pathIs';
-import { path } from './functions/path';
+export * from 'ramda'; // Export Ramda functions
 
-export * from 'ramda';
-export {
-  isNilOrEmpty,
-  pathIs,
-  path
-};
+export { findOr } from './functions/findOr';
+export { isNilOrEmpty } from './functions/isNilOrEmpty';
+export { pathIs } from './functions/pathIs';
+export { path } from './functions/path';
+
