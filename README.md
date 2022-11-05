@@ -83,7 +83,7 @@ It can be used to log a value at a step of a composition function. It does not a
 
 `any => any`
 ```js
-import { log, compose } from 'ramdo';
+import { log, compose, append } from 'ramdo';
 
 compose(
    append('Text 2'),
@@ -148,7 +148,7 @@ Otherwise, the source object is returned.
 
 `(String, any, object) => object`
 ```js
-import { pathDefaultTo } from 'ramdo';
+import { propDefaultTo } from 'ramdo';
 
 const obj = {
     firstName: 'John'
