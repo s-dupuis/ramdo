@@ -14,4 +14,5 @@ export { pathEq } from './functions/pathEq';
 export { pathIs } from './functions/pathIs';
 export { pathSatisfies } from'./functions/pathSatisfies';
 export { pathOr } from './functions/pathOr';
+export { pluckPath }from'./functions/pluckPath';
 export { propDefaultTo } from './functions/propDefaultTo';
