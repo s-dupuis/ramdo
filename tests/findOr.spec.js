@@ -14,14 +14,14 @@ describe('findOr', () => {
   ];
 
   it('item found', () => {
-    assert.equal(findOr(propEq('name', 'ramdo2'), item3, items), item2);
+    assert.equal(findOr(item3, propEq('name', 'ramdo2'), items), item2);
   });
 
   it('item not found', () => {
-    assert.equal(findOr(propEq('name', 'ramdo4'), item3, items), item3);
+    assert.equal(findOr(item3, propEq('name', 'ramdo4'), items), item3);
   });
 
   it('curried', () => {
-    assert.equal(findOr(propEq('name', 'ramdo4'))(item3)(items), item3);
+    assert.equal(findOr(item3)(propEq('name', 'ramdo4'))(items), item3);
   });
 });

@@ -48,15 +48,15 @@ pathEq('prop1.prop2.prop3', 'value', {})
 
 Returns the first element of the list which matches the predicate, or defaultValue if no element matches.
 
-`(Function, any, any[]) => any`
+`(any, Function, any[]) => any`
 ```js
 import { findOr, propEq } from '@sebdup/ramdo';
 
 const items = [{ name: 'John' }];
 
 findOr(
-    propEq('name', 'Patrick'),
-    { name: 'Harry' }
+    { name: 'Harry' },
+    propEq('name', 'Patrick')
 )(items); // { name: 'Harry' }
 ```
 
