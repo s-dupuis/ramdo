@@ -41,6 +41,7 @@ pathEq('prop1.prop2.prop3', 'value', {})
 * [log](https://github.com/s-dupuis/ramdo#log)
 * [pathDefaultTo](https://github.com/s-dupuis/ramdo#pathdefaultto)
 * [pathIs](https://github.com/s-dupuis/ramdo#pathis)
+* [pluckPath](https://github.com/s-dupuis/ramdo#pluckpath)
 * [propDefaultTo](https://github.com/s-dupuis/ramdo#propdefaultto)
 
 ### findOr
@@ -135,6 +136,26 @@ const obj = {
 };
 pathIs(['subObj1', 'subObj2', 'name'], String, obj); // true
 pathIs('subObj1.subObj2.name', Number, obj); // false
+```
+
+### pluckPath
+
+Returns a new list by plucking the same named path off all objects in the list supplied. 
+
+pluckPath will work on any functor in addition to arrays, as it is equivalent to R.map(R.path(path), f).
+
+`(String|String[], object[]) => any[]`
+```js
+import { pluckPath } from '@sebdup/ramdo';
+
+const array = [
+    { user: { name: 'Peter' } },
+    { user: { name: 'John' } },
+    { user: { name: 'Mark' } }
+];
+
+pluckPath('user.name', array); // ['Peter', 'John', 'Mark']
+pluckPath(['user', 'name'], array); // ['Peter', 'John', 'Mark']
 ```
 
 ### propDefaultTo
